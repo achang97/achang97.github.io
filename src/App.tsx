@@ -7,6 +7,7 @@ import {
   Anchor,
   Burger,
   Group,
+  AspectRatio,
 } from '@mantine/core';
 import {
   BrowserRouter as Router,
@@ -102,13 +103,9 @@ const App = () => {
           <AppShell.Navbar bg="gray.2">
             <Stack align="center" gap="xl" p="xl">
               <Stack gap="md" align="center">
-                <Image
-                  src="/profile.jpg"
-                  alt="Andrew Chang"
-                  width={200}
-                  height={200}
-                  radius="100%"
-                />
+                <AspectRatio ratio={1} w={200}>
+                  <Image src="/profile.jpg" alt="Andrew Chang" radius="100%" />
+                </AspectRatio>
                 <Title order={2}>Andrew Chang</Title>
                 <Group>
                   {LINK_ITEMS.map((item) => (
