@@ -9,13 +9,7 @@ import {
   Group,
   AspectRatio,
 } from '@mantine/core';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
-  Navigate,
-} from 'react-router-dom';
+import { Route, Routes, Link, Navigate, useLocation } from 'react-router-dom';
 import { LifeProjects } from './pages/LifeProjects';
 import { CodingProjects } from './pages/CodingProjects';
 import { ClassicalViolin } from './pages/ClassicalViolin';
@@ -80,83 +74,81 @@ const LINK_ITEMS = [
 
 const App = () => {
   const [isNavbarOpen, { toggle: toggleNavbar }] = useDisclosure(false);
+  const location = useLocation();
 
   return (
     <MantineProvider>
-      <Router>
-        <ScrollToTop /> {/* Add this line */}
-        <AppShell
-          padding="md"
-          header={{ height: { base: 50, sm: 0 } }}
-          navbar={{
-            width: { base: 300 },
-            breakpoint: 'sm',
-            collapsed: { mobile: !isNavbarOpen },
-          }}
-        >
-          <AppShell.Header hiddenFrom="sm" bg="gray.2">
-            <Stack justify="center" align="center" h="100%">
-              <Burger opened={isNavbarOpen} onClick={toggleNavbar} size="sm" />
-            </Stack>
-          </AppShell.Header>
+      <AppShell
+        padding="md"
+        header={{ height: { base: 50, sm: 0 } }}
+        navbar={{
+          width: { base: 300 },
+          breakpoint: 'sm',
+          collapsed: { mobile: !isNavbarOpen },
+        }}
+      >
+        <AppShell.Header hiddenFrom="sm" bg="gray.2">
+          <Stack justify="center" align="center" h="100%">
+            <Burger opened={isNavbarOpen} onClick={toggleNavbar} size="sm" />
+          </Stack>
+        </AppShell.Header>
 
-          <AppShell.Navbar bg="gray.2">
-            <Stack align="center" gap="xl" p="xl">
-              <Stack gap="md" align="center">
-                <AspectRatio ratio={1} w={200}>
-                  <Image src="/profile.jpg" alt="Andrew Chang" radius="100%" />
-                </AspectRatio>
-                <Title order={2}>Andrew Chang</Title>
-                <Group>
-                  {LINK_ITEMS.map((item) => (
-                    <IconLink
-                      key={item.path}
-                      href={item.path}
-                      Icon={item.icon}
-                      label={item.label}
-                      size={24}
-                    />
-                  ))}
-                </Group>
-              </Stack>
-              <Stack gap="sm" align="center">
-                {NAV_ITEMS.map((item) => (
-                  <Anchor
+        <AppShell.Navbar bg="gray.2">
+          <Stack align="center" gap="xl" p="xl">
+            <Stack gap="md" align="center">
+              <AspectRatio ratio={1} w={200}>
+                <Image src="/profile.jpg" alt="Andrew Chang" radius="100%" />
+              </AspectRatio>
+              <Title order={2}>Andrew Chang</Title>
+              <Group>
+                {LINK_ITEMS.map((item) => (
+                  <IconLink
                     key={item.path}
-                    component={Link}
-                    to={item.path}
-                    onClick={toggleNavbar}
-                    fw={item.path === location.pathname ? 'bold' : 'normal'}
-                  >
-                    {item.title}
-                  </Anchor>
+                    href={item.path}
+                    Icon={item.icon}
+                    label={item.label}
+                    size={24}
+                  />
                 ))}
-              </Stack>
+              </Group>
             </Stack>
-          </AppShell.Navbar>
-
-          <AppShell.Main>
-            <ScrollToTop />
-            <Routes>
+            <Stack gap="sm" align="center">
               {NAV_ITEMS.map((item) => (
-                <Route
+                <Anchor
                   key={item.path}
-                  path={item.path}
-                  element={
-                    <PageTemplate title={item.title} subtitle={item.subtitle}>
-                      <item.component />
-                    </PageTemplate>
-                  }
-                />
+                  component={Link}
+                  to={item.path}
+                  onClick={toggleNavbar}
+                  fw={item.path === location.pathname ? 'bold' : 'normal'}
+                >
+                  {item.title}
+                </Anchor>
               ))}
+            </Stack>
+          </Stack>
+        </AppShell.Navbar>
+
+        <AppShell.Main>
+          <ScrollToTop />
+          <Routes>
+            {NAV_ITEMS.map((item) => (
               <Route
-                path="/"
-                element={<Navigate to={NAV_ITEMS[0].path} replace />}
+                key={item.path}
+                path={item.path}
+                element={
+                  <PageTemplate title={item.title} subtitle={item.subtitle}>
+                    <item.component />
+                  </PageTemplate>
+                }
               />
-            </Routes>
-          </AppShell.Main>
-        </AppShell>
-      </Router>
+            ))}
+            <Route
+              path="/"
+              element={<Navigate to={NAV_ITEMS[0].path} replace />}
+            />
+          </Routes>
+        </AppShell.Main>
+      </AppShell>
     </MantineProvider>
   );
 };
