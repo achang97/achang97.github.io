@@ -3,7 +3,7 @@ import {
   IconBrandGithub,
   IconBrandProducthunt,
   IconPdf,
-  IconWebhook,
+  IconWorldWww,
 } from '@tabler/icons-react';
 import { ImageCard } from '../components/ImageCard';
 
@@ -88,7 +88,7 @@ const SECTIONS: {
 const LINK_CONFIG = {
   paper: { label: 'Paper', Icon: IconPdf },
   github: { label: 'GitHub', Icon: IconBrandGithub },
-  landing: { label: 'Landing Page', Icon: IconWebhook },
+  landing: { label: 'Landing Page', Icon: IconWorldWww },
   productHunt: { label: 'Product Hunt', Icon: IconBrandProducthunt },
 };
 
