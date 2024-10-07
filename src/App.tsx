@@ -36,7 +36,7 @@ const NAV_ITEMS: {
     title: 'Coding Projects',
     subtitle: [
       "I majored in computer science at Stanford University, concentrating in AI. Nowadays, I'm a fullstack developer and former YC (S20) founder.",
-      `Not to be stereotypical, but I'm really excited about LLMs and voice AI in particular! I'm eager to see what the future of personal education will look like, especially for use cases like language learning.`,
+      `I'm really excited about LLMs and voice AI in particular! I'm eager to see what the future of personal education will look like, especially for use cases like language learning.`,
     ],
   },
   {
@@ -73,8 +73,10 @@ const LINK_ITEMS = [
 ];
 
 const App = () => {
-  const [isNavbarOpen, { toggle: toggleNavbar }] = useDisclosure(false);
   const location = useLocation();
+  const [isNavbarOpen, { toggle: toggleNavbar }] = useDisclosure(
+    location.pathname === '/'
+  );
 
   return (
     <MantineProvider>

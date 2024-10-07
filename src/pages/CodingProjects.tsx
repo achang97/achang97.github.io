@@ -60,7 +60,7 @@ const SECTIONS: {
     ],
   },
   {
-    title: 'AI "Papers"',
+    title: 'AI Papers',
     items: [
       {
         title: 'Aspect-Based Sentiment Analysis (ABSA) on Glassdoor Reviews',
