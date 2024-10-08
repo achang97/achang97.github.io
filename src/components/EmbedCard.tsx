@@ -17,6 +17,7 @@ export const EmbedCard = ({ title, subtitle, urls, src }: EmbedCardProps) => {
           height="100%"
           src={src}
           frameBorder="0"
+          allowFullScreen
           style={{
             borderRadius: theme.radius.md,
             zIndex: 1,
