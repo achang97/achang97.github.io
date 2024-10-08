@@ -21,7 +21,7 @@ export const PageTemplate = ({
       <Stack mb="md">
         <Title>{title}</Title>
         {subtitle && (
-          <Card bg="white" p="md" radius="md" shadow="sm" fs="italic">
+          <Card p="md" radius="md" shadow="sm" fs="italic">
             {subtitle && typeof subtitle === 'string' && (
               <Text size="lg">{subtitle}</Text>
             )}

@@ -1,5 +1,6 @@
 import { Title, Stack, Grid } from '@mantine/core';
 import {
+  IconBrandBlogger,
   IconBrandGithub,
   IconBrandProducthunt,
   IconPdf,
@@ -18,23 +19,13 @@ const SECTIONS: {
       github?: string;
       landing?: string;
       productHunt?: string;
+      blog?: string;
     };
   }[];
 }[] = [
   {
-    title: 'Personal Projects',
+    title: 'Venture Companies',
     items: [
-      {
-        title: 'Code Coach',
-        subtitle:
-          'A voice AI agent that conducts mock technical interviews and provides feedback',
-        img: '/code-coach.png',
-        urls: {
-          landing: 'https://www.trycodecoach.com/',
-          productHunt:
-            'https://www.producthunt.com/products/code-coach#code-coach',
-        },
-      },
       {
         title: 'Elixir',
         subtitle: 'LLM observability and monitoring for voice AI agents',
@@ -42,6 +33,30 @@ const SECTIONS: {
         urls: {
           landing: 'https://www.tryelixir.ai/',
           productHunt: 'https://www.producthunt.com/products/elixir-2#elixir-2',
+        },
+      },
+      {
+        title: 'Omni (YC S20, Acq. Coinbase)',
+        subtitle: 'AI-powered knowledge base for sales and support teams',
+        img: '/omni.png',
+        urls: {
+          landing: 'https://www.ycombinator.com/companies/omni',
+        },
+      },
+    ],
+  },
+  {
+    title: 'Personal Projects',
+    items: [
+      {
+        title: 'Code Coach',
+        subtitle:
+          'Voice AI agent that conducts mock technical interviews and provides feedback',
+        img: '/code-coach.png',
+        urls: {
+          landing: 'https://www.trycodecoach.com/',
+          productHunt:
+            'https://www.producthunt.com/products/code-coach#code-coach',
         },
       },
     ],
@@ -90,6 +105,7 @@ const LINK_CONFIG = {
   github: { label: 'GitHub', Icon: IconBrandGithub },
   landing: { label: 'Landing Page', Icon: IconWorldWww },
   productHunt: { label: 'Product Hunt', Icon: IconBrandProducthunt },
+  blog: { label: 'Blog', Icon: IconBrandBlogger },
 };
 
 export const CodingProjects = () => {

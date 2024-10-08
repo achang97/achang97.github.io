@@ -1,0 +1,16 @@
+.root {
+  transition: background-color 0.3s ease;
+  box-shadow: var(--mantine-shadow-lg);
+
+  @mixin light {
+    &:hover {
+      background-color: var(--mantine-color-indigo-1);
+    }
+  }
+
+  @mixin dark {
+    &:hover {
+      background-color: var(--mantine-color-dark-9);
+    }
+  }
+}

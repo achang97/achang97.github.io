@@ -1,6 +1,7 @@
 import { Card, Divider, Group, Text, Stack } from '@mantine/core';
 import { IconLink, IconLinkProps } from './IconLink';
 import { ReactNode } from 'react';
+import classes from './styles/BaseCard.module.css';
 
 export type BaseCardProps = {
   children: ReactNode;
@@ -16,7 +17,7 @@ export const BaseCard = ({
   urls,
 }: BaseCardProps) => {
   return (
-    <Card p="xl" radius="md" h="100%" shadow="sm">
+    <Card p="xl" radius="md" h="100%" shadow="sm" className={classes.root}>
       <Stack align="center" h="100%" gap="xs">
         <Card.Section w="100%">{children}</Card.Section>
 
