@@ -66,8 +66,8 @@ const SECTIONS: {
         subtitle: 'Job finder and resume builder for the formerly incarcerated',
         img: '/elevate.png',
         urls: {
-          landing:
-            'https://web.archive.org/web/20201130195711/https://www.elevatejobs.org/',
+          // landing:
+          //   'https://web.archive.org/web/20201130195711/https://www.elevatejobs.org/',
           blog: 'https://www.ipswichfirst.com.au/usq-program-attracts-international-interest/',
           youtube: 'https://www.youtube.com/watch?v=MTb0SiDx0Rc',
         },
