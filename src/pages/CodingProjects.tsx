@@ -3,6 +3,7 @@ import {
   IconBrandBlogger,
   IconBrandGithub,
   IconBrandProducthunt,
+  IconBrandYoutube,
   IconPdf,
   IconWorldWww,
 } from '@tabler/icons-react';
@@ -20,6 +21,7 @@ const SECTIONS: {
       landing?: string;
       productHunt?: string;
       blog?: string;
+      youtube?: string;
     };
   }[];
 }[] = [
@@ -57,6 +59,17 @@ const SECTIONS: {
           landing: 'https://www.trycodecoach.com/',
           productHunt:
             'https://www.producthunt.com/products/code-coach#code-coach',
+        },
+      },
+      {
+        title: 'Elevate',
+        subtitle: 'Job finder and resume builder for the formerly incarcerated',
+        img: '/elevate.png',
+        urls: {
+          landing:
+            'https://web.archive.org/web/20201130195711/https://www.elevatejobs.org/',
+          blog: 'https://www.ipswichfirst.com.au/usq-program-attracts-international-interest/',
+          youtube: 'https://www.youtube.com/watch?v=MTb0SiDx0Rc',
         },
       },
     ],
@@ -106,6 +119,7 @@ const LINK_CONFIG = {
   landing: { label: 'Landing Page', Icon: IconWorldWww },
   productHunt: { label: 'Product Hunt', Icon: IconBrandProducthunt },
   blog: { label: 'Blog', Icon: IconBrandBlogger },
+  youtube: { label: 'YouTube', Icon: IconBrandYoutube },
 };
 
 export const CodingProjects = () => {
