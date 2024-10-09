@@ -62,6 +62,14 @@ const SECTIONS: {
         },
       },
       {
+        title: '3Tool',
+        subtitle: 'Retool for Web3',
+        img: '/3tool.png',
+        urls: {
+          landing: 'https://www.3tool.vercel.app/',
+        },
+      },
+      {
         title: 'Elevate',
         subtitle: 'Job finder and resume builder for the formerly incarcerated',
         img: '/elevate.png',
