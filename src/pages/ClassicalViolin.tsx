@@ -2,11 +2,11 @@ import { Grid } from '@mantine/core';
 import { EmbedCard } from '../components/EmbedCard';
 
 const ITEMS = [
-  // {
-  //   url: 'https://youtube.com/embed/G2Cc73BYHfM',
-  //   title: 'Violin Sonata No. 10, Op. 96',
-  //   artist: 'Ludwig van Beethoven',
-  // },
+  {
+    url: 'https://youtube.com/embed/bfrhbz0Cdk0',
+    title: 'Violin Sonata No. 10, Op. 96',
+    artist: 'Ludwig van Beethoven',
+  },
   // {
   //   url: 'https://youtube.com/embed/_BDO87AG1Y0',
   //   title:
@@ -14,15 +14,15 @@ const ITEMS = [
   //   artist: 'Johannes Brahms',
   // },
   {
-    url: 'https://youtube.com/embed/xwqrrM0Az8k',
+    url: 'https://youtube.com/embed/4Ts1NJ6va3A',
     title: 'Caprice No. 24',
     artist: 'Niccolo Paganini',
   },
-  // {
-  //   url: 'https://youtube.com/embed/r3gzXU4Nr6Q',
-  //   title: 'Sonata No. 3 in D minor (Ballade)',
-  //   artist: 'Eugène Ysaÿe',
-  // },
+  {
+    url: 'https://youtube.com/embed/Vj84ihuDItU',
+    title: 'Sonata No. 3 in D minor (Ballade)',
+    artist: 'Eugène Ysaÿe',
+  },
   {
     url: 'https://youtube.com/embed/oRjZpcRj4uw',
     title: 'Scottish Fantasy (Finale: Allegro guerriero)',
